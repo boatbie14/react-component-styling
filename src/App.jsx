@@ -12,10 +12,10 @@ function App() {
       </div>
       <hr />
       <div className="alert-components-section">
-        <Alert type="error" text="error"/>
-        <Alert type="warning" />
-        <Alert type="info" />
-        <Alert type="success" />
+        <Alert type="error">error</Alert>
+        <Alert type="warning">warning</Alert>
+        <Alert type="info">info</Alert>
+        <Alert type="success">success</Alert>
       </div>
     </div>
   );
