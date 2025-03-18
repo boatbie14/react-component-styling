@@ -7,7 +7,7 @@ function Button({ styleType = 'primary', children }) {
     secondary: 'bg-blue-500 hover:bg-gray-600',
   };
 
-  const buttonClass = `${baseClass} ${styleClasses[styleType] || styleClasses.primary}`;
+  const buttonClass = `${baseClass} ${styleClasses[styleType]}`;
 
   return (
     <button className={buttonClass}>
