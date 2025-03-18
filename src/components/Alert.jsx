@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaExclamationCircle, FaExclamationTriangle, FaInfoCircle, FaCheckCircle } from 'react-icons/fa';
+import { FaSadTear, FaExclamationTriangle, FaInfoCircle, FaCheckCircle } from 'react-icons/fa';
+
 
 function Alert({ type = 'info', children }) {
   const baseClass = 'p-4 rounded-lg font-medium flex items-center w-60';
@@ -11,10 +12,10 @@ function Alert({ type = 'info', children }) {
   };
 
   const iconClasses = {
-    error: <FaExclamationCircle className="mr-2" />,
-    warning: <FaExclamationTriangle className="mr-2" />,
-    info: <FaInfoCircle className="mr-2" />,
-    success: <FaCheckCircle className="mr-2" />,
+    error: <FaSadTear className="mr-5 text-xl" />, // Updated error icon
+    warning: <FaExclamationTriangle className="mr-5 text-xl" />,
+    info: <FaInfoCircle className="mr-5 text-xl" />,
+    success: <FaCheckCircle className="mr-5 text-xl" />,
   };
 
   const alertClass = `${baseClass} ${typeClasses[type]}`;
