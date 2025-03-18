@@ -3,19 +3,19 @@ import { FaSadTear, FaExclamationTriangle, FaInfoCircle, FaCheckCircle } from 'r
 
 
 function Alert({ type = 'info', children }) {
-  const baseClass = 'p-4 rounded-lg font-medium flex items-center w-60';
+  const baseClass = 'p-4 rounded-lg font-medium flex items-center w-[550px]';
   const typeClasses = {
-    error: 'bg-red-400 text-red-800 ',
-    warning: 'bg-yellow-400 text-yellow-800 ',
-    info: 'bg-blue-400 text-blue-800 ',
-    success: 'bg-green-400 text-green-800 ',
+    error: 'bg-red-200 text-red-400 ',
+    warning: 'bg-red-100 text-red-400 ',
+    info: 'bg-yellow-100 text-yellow-300 ',
+    success: 'bg-green-200 text-green-400 ',
   };
 
   const iconClasses = {
-    error: <FaSadTear className="mr-5 text-xl" />, // Updated error icon
-    warning: <FaExclamationTriangle className="mr-5 text-xl" />,
-    info: <FaInfoCircle className="mr-5 text-xl" />,
-    success: <FaCheckCircle className="mr-5 text-xl" />,
+    error: <FaSadTear className="mr-5 text-lg" />, // Updated error icon
+    warning: <FaExclamationTriangle className="mr-5 text-lg" />,
+    info: <FaInfoCircle className="mr-5 text-lg" />,
+    success: <FaCheckCircle className="mr-5 text-lg" />,
   };
 
   const alertClass = `${baseClass} ${typeClasses[type]}`;
@@ -23,7 +23,7 @@ function Alert({ type = 'info', children }) {
   return (
     <div className={alertClass}>
       {iconClasses[type]}
-      <span className="text-white font-semibold">{children}</span>
+      <span className="text-gray-800 font-semibold">{children}</span>
     </div>
   );
 }
